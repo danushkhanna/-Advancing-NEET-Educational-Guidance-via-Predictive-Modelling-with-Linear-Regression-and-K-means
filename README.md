@@ -1,4 +1,4 @@
-# Advancing NEET Educational Guidance: Integrated Rank Estimation and College Clustering via Predictive Modelling with Linear Regression and K-means Algorithm
+# Integrated NEET Rank Estimation and College Clustering via Predictive Modelling with Linear Regression and K-means Algorithm
 
 This repository is dedicated to advancing academic counseling using data-driven insights and predictive modeling techniques. Through a comprehensive exploration of data analytics, predictive models, and clustering algorithms, this project seeks to revolutionize the landscape of NEET (National Eligibility cum Entrance Test) counseling.
 
