@@ -1,13 +1,11 @@
-National Eligibility cum Entrance Test (NEET) Rank Estimation and College Clustering using Linear Regression and K-means Algorithms.
-
 ## Table of Contents:
 
 - [Introduction](#introduction)
-- [Predictive Rank Estimation](#predictive-rank-estimation)
-- [College Clustering](#college-clustering)
-- [Attraction Index Computation](#attraction-index-computation)
-- [Regional Trends Analysis](#regional-trends-analysis)
-- [Model Validation](#model-validation)
+- [Data Preparation](#data-preparation)
+- [Rank Estimation with Linear Regression](#rank-estimation-with-linear-regression)
+- [College Clustering with K-means Algorithm](#college-clustering-with-k-means-algorithm)
+- [Visualizations](#visualizations)
+- [Summary Statistics](#summary-statistics)
 - [Usage](#usage)
 - [Contributions](#contributions)
 - [License](#license)
@@ -15,43 +13,54 @@ National Eligibility cum Entrance Test (NEET) Rank Estimation and College Cluste
 
 ## Introduction
 
-In the ever-evolving landscape of academic counseling, the integration of data analytics and predictive modeling has emerged as a revolutionary approach. This repository dives deep into the realms of data exploration, predictive modeling, and clustering methodologies, all aimed at redefining the NEET educational guidance process.
+With the power of data-driven growth, let’s help reimagine what's possible and empower the next generation of medical professionals. We solve two problems: 
+- Challenges in providing accurate counseling due to missing NEET scores and ranks in student profiles.
+- Lack of insights into college preferences and attrition rates hinders effective guidance for students' academic choices.
 
-## Predictive Rank Estimation
+## Data Preparation
 
-Our journey begins with a profound exploration of data analytics, uncovering hidden gems that have the potential to reshape academic counseling. We delved into the nuances of the dataset, juggling a vast repository of 100,000 entries. Intriguingly, 40% of this data contained gaps, presenting a unique challenge.
+Problem 1: Incomplete Data in Student Scores and Ranks Around 40% of the dataset contains missing scores for NEET Ranks.
+
+Our study commences with an in-depth examination of data analytics, aiming to reveal valuable insights capable of influencing academic counseling practices. We scrutinized a sizable dataset comprising 100,000 entries, noting that 40% of the data contained gaps, posing a notable challenge for analysis. 
 
 <p float="left">
   <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Missing%20data.png" width="300" height="300">
   <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Given%20dataset.png" width="500" height="300">
 </p>
 
-## College Clustering
+## Rank Estimation with Linear Regression
 
-Next, we dived into the realm of Linear Regression, leveraging this technique to forecast Expected Scores from NEET Ranks. We navigated the complexities of the dataset, weaving predictions into its fabric to provide personalized guidance. The outcome was a predictive model that enables tailored interventions, even for students with missing data.
+To address the problem of colleges experiencing varying levels of attrition (dropout rates) among students and the lack of understanding about factors influencing student attrition, our project delved into Rank Estimation with Linear Regression.
+
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Linear%20Regression%20Prediction.png" width="500" height="500">
+
+## College Clustering with K-means Algorithm
+
+Problem 2: Colleges experience varying levels of attrition (dropout rates) among students. Lack of understanding about factors influencing student attrition.
+
+To address this, our project delved into College Clustering using the k-means algorithm. By applying this technique to a dataset of 400 colleges, we clustered them based on Round 1 closings and attrition rates. To refine our clustering process, we employed methods like the elbow curve and silhouette score. Our goal was to gain insights into the factors contributing to student attrition.
 
 <p float="left">
   <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="300" height="500">
   <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="700" height="500">
 </p>
 
-## Attraction Index Computation
+## Visualizations
 
-The project then embarked on the journey of K-means clustering, a powerful unsupervised machine learning algorithm. By applying K-means to a dataset of 400 colleges, we clustered them based on Round 1 closings and attrition rates. This strategic clustering lays the foundation for more informed counseling strategies, tailored to each college's unique story.
+Continuing our analysis, we computed the "Attraction Index" for colleges, providing insights into their appeal. This index, derived from analyzing 324 colleges, revealed a mean score of 94.45, highlighting the prestige of various institutions.
+
+<p float="left">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="500" height="500">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Average%20Attrition%20%25%20by%20Cluster%20.png" width="500" height="500">
+</p>
+
+## Summary Statistics
+
+We then moved on to compute the Attraction Index. Through K-means clustering, a robust unsupervised machine learning algorithm, we categorized the colleges based on their characteristics. This approach sets the stage for developing tailored counseling strategies, catering to the unique dynamics of each college.
 
 <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="500" height="500">
 
-## Regional Trends Analysis
-
-One of the highlights of our analysis was the computation of the "Attraction Index" for colleges. This index quantifies the allure of colleges, assigning scores that provide valuable insights. Through rigorous analysis of 324 colleges, we discovered a mean "Attraction Index" of 94.45, shedding light on the prestige and appeal of various institutions.
-
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="500" height="500">
-
-## Model Validation
-
-Our exploration didn't stop there. We delved into regional trends, unearthing intriguing variations in attrition rates across different states. Visualizing this data through box plots illuminated the diverse academic landscapes of various states. To validate our predictive models, we obtained an impressive R-squared value of 0.8925, confirming the efficacy of our approach.
-
-<img src="https://raw.githubusercontent.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/main/Linear%20Regression%20Prediction.png?token=GHSAT0AAAAAACEW24XLLZTOOATMGDFJDJLWZQJY3HA" width="500" height="500">
+Next, we conducted model validation by analyzing regional trends and evaluating our predictive models. Through box plots, we visually represented the differences in attrition rates across various states, providing insights into the educational landscape. Additionally, our Linear Regression model achieved a robust R-squared value of 0.8925 during validation, indicating its accuracy in predicting Expected Scores based on NEET Ranks.
 
 ## Usage
 
