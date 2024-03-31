@@ -77,11 +77,3 @@ If you're excited to leverage the potential of our project, follow these steps:
 ## Contributions
 
 Your contributions are invaluable to us! Whether it's enhancing existing features, introducing novel insights, or refining the codebase, we welcome your input. Feel free to submit issues or pull requests to be a part of this project.
-
-## License
-
-This project operates under the permissive [MIT License](LICENSE), allowing you to explore, modify, and share the codebase.
-
-## Acknowledgements
-
-We extend our gratitude to the open-source community and all the contributors who enrich this project. Your efforts fuel innovation and leave an enduring legacy at the intersection of data analytics and educational guidance.
