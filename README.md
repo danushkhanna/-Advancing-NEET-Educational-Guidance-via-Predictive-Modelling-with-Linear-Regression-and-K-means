@@ -1,6 +1,4 @@
-Integrated NEET Rank Estimation and College Clustering Using Predictive Modeling with Linear Regression and K-means Algorithm.
-
-This repository is dedicated to advancing academic counseling using data-driven insights and predictive modeling techniques. Through a comprehensive exploration of data analytics, predictive models, and clustering algorithms, this project seeks to revolutionize the landscape of NEET (National Eligibility cum Entrance Test) counseling.
+National Eligibility cum Entrance Test (NEET) Rank Estimation and College Clustering using Linear Regression and K-means Algorithms.
 
 ## Table of Contents:
 
@@ -23,21 +21,37 @@ In the ever-evolving landscape of academic counseling, the integration of data a
 
 Our journey begins with a profound exploration of data analytics, uncovering hidden gems that have the potential to reshape academic counseling. We delved into the nuances of the dataset, juggling a vast repository of 100,000 entries. Intriguingly, 40% of this data contained gaps, presenting a unique challenge.
 
+<p float="left">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Missing%20data.png" width="300" height="300">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Given%20dataset.png" width="500" height="300">
+</p>
+
 ## College Clustering
 
 Next, we dived into the realm of Linear Regression, leveraging this technique to forecast Expected Scores from NEET Ranks. We navigated the complexities of the dataset, weaving predictions into its fabric to provide personalized guidance. The outcome was a predictive model that enables tailored interventions, even for students with missing data.
+
+<p float="left">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="300" height="500">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="700" height="500">
+</p>
 
 ## Attraction Index Computation
 
 The project then embarked on the journey of K-means clustering, a powerful unsupervised machine learning algorithm. By applying K-means to a dataset of 400 colleges, we clustered them based on Round 1 closings and attrition rates. This strategic clustering lays the foundation for more informed counseling strategies, tailored to each college's unique story.
 
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="500" height="500">
+
 ## Regional Trends Analysis
 
 One of the highlights of our analysis was the computation of the "Attraction Index" for colleges. This index quantifies the allure of colleges, assigning scores that provide valuable insights. Through rigorous analysis of 324 colleges, we discovered a mean "Attraction Index" of 94.45, shedding light on the prestige and appeal of various institutions.
 
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="500" height="500">
+
 ## Model Validation
 
 Our exploration didn't stop there. We delved into regional trends, unearthing intriguing variations in attrition rates across different states. Visualizing this data through box plots illuminated the diverse academic landscapes of various states. To validate our predictive models, we obtained an impressive R-squared value of 0.8925, confirming the efficacy of our approach.
+
+<img src="https://raw.githubusercontent.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/main/Linear%20Regression%20Prediction.png?token=GHSAT0AAAAAACEW24XLLZTOOATMGDFJDJLWZQJY3HA" width="500" height="500">
 
 ## Usage
 
