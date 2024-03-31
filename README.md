@@ -32,7 +32,7 @@ Our study commences with an in-depth examination of data analytics, aiming to re
 
 To address the problem of colleges experiencing varying levels of attrition (dropout rates) among students and the lack of understanding about factors influencing student attrition, our project delved into Rank Estimation with Linear Regression.
 
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Linear%20Regression%20Prediction.png" width="450" height="450">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Linear%20Regression%20Prediction.png" width="400" height="400">
 
 ## College Clustering with K-means Algorithm
 
