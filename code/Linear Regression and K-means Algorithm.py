@@ -8,37 +8,54 @@ Original file is located at
     https://colab.research.google.com/drive/1fBTewzC2mjsoZaaUoeAIq5MrEJn9-6Gr
 """
 
+# In[1]:
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# In[2]:
+
 df = pd.read_csv('/content/New Score-Rank.csv')
+
+# In[3]:
 
 df_null = df[df['Expected Score'].isnull()]
 df_new = df[df['Expected Score'].notnull()]
 df_null.fillna("",inplace=True)
 df_null
 
+# In[4]:
+
 X = df_new.iloc[:, 1:-1].values
 y = df_new.iloc[:, -1].values
 X_null = df_null.iloc[:, 1:-1].values
 y_null = df_null.iloc[:, -1].values
 
+# In[5]:
+
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
+
+# In[6]:
 
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 model = regressor.fit(X_train, y_train)
 y_null_predict = model.predict(X_null)
 
+# In[7]:
+
 df_null['Expected Score'] = y_null_predict
 df_null
 
+# In[8]:
+
 # Concatenate the DataFrame and Series
 df_newfull = pd.concat([df_new, df_null])
-
 df_newfull
+
+# In[9]:
 
 plt.scatter(X_train, y_train, color = 'red')
 plt.plot(X_train,model.predict(X_train), color = 'blue')
@@ -47,9 +64,12 @@ plt.xlabel('NEET Rank')
 plt.ylabel('Expected Score')
 plt.show()
 
-dfscore=pd.read_csv("/content/Merged_data.csv")
+# In[10]:
 
+dfscore=pd.read_csv("/content/Merged_data.csv")
 dfscore
+
+# In[11]:
 
 plt.figure(figsize=(10, 6))
 cluster_avg_attrition = dfscore.groupby('Cluster')['Attrition %'].mean().sort_values(ascending=False)
@@ -60,6 +80,8 @@ plt.title('Average Attrition % by Cluster')
 plt.xticks(rotation=0)
 plt.show()
 
+# In[12]:
+
 top_colleges = dfscore.nlargest(10, 'Attraction Index')
 plt.barh(top_colleges['College name in college and course sheet 2023'], top_colleges['Attraction Index'])
 plt.xlabel('Attraction Index')
@@ -67,6 +89,8 @@ plt.ylabel('College')
 plt.title('Top Colleges by Attraction Index')
 plt.gca().invert_yaxis()
 plt.show()
+
+# In[13]:
 
 import matplotlib.pyplot as plt
 
@@ -80,12 +104,18 @@ plt.ylabel('Number of Students')
 plt.title('State-wise Distribution of Students')
 plt.xticks(rotation=90)
 
+# In[14]:
+
 # Adding a legend with color explanations
 legend_labels = [f'{state}: {count}' for state, count in zip(state_counts.index, state_counts.values)]
 plt.legend(bars, legend_labels, title='State Counts', loc='upper right', bbox_to_anchor=(1.1, 1))
 
+# In[15]:
+
 plt.tight_layout()
 plt.show()
+
+# In[16]:
 
 plt.figure(figsize=(10, 6))
 sns.boxplot(data=dfscore, x='STATE', y='Attrition %')
@@ -94,6 +124,8 @@ plt.ylabel('Attrition %')
 plt.title('Attrition % by State')
 plt.xticks(rotation=90)
 plt.show()
+
+# In[17]:
 
 # Calculate summary statistics
 mean_expected_score = df_newfull['Expected Score'].mean()
@@ -109,12 +141,16 @@ print(f"Standard Deviation of Expected Score: {std_expected_score}")
 print(f"Minimum Expected Score: {min_expected_score}")
 print(f"Maximum Expected Score: {max_expected_score}")
 
+# In[18]:
+
 # Box plot for Expected Score
 plt.figure(figsize=(8, 6))
 plt.boxplot(df_newfull['Expected Score'])
 plt.title('Box Plot of Expected Score')
 plt.ylabel('Expected Score')
 plt.show()
+
+# In[19]:
 
 # Calculate quartiles
 q25 = df_newfull['Expected Score'].quantile(0.25)
@@ -124,6 +160,8 @@ q75 = df_newfull['Expected Score'].quantile(0.75)
 print(f"25th Percentile (Q1): {q25}")
 print(f"75th Percentile (Q3): {q75}")
 
+# In[20]:
+
 # Import necessary library
 from sklearn.metrics import r2_score
 
@@ -132,6 +170,8 @@ y_val_pred = model.predict(X_val)
 # Calculate R-squared for validation
 r2_val = r2_score(y_val, y_val_pred)
 print(f"R-squared for validation: {r2_val:.4f}")
+
+# In[21]:
 
 # Plot the validated results
 plt.scatter(X_val, y_val, color='red', label='Actual Data')
@@ -145,6 +185,8 @@ plt.show()
 # This Python 3 environment comes with many helpful analytics libraries installed
 # It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
 # For example, here's several helpful packages to load
+
+# In[23]:
 
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
@@ -160,48 +202,63 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 # You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save & Run All"
 # You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session
 
+# In[24]:
+
 collegelist = pd.read_csv("/content/Merged_data.csv")
 
 collegelist.shape
 
+# In[25]:
+
 collegelist.head()
+
+# In[26]:
 
 collegelist.tail()
 
-filtered_df = collegelist[collegelist['Allotted Quota'] == 'All India']
+# In[27]:
 
+filtered_df = collegelist[collegelist['Allotted Quota'] == 'All India']
 filtered_df.shape
+
+# In[28]:
 
 filtered_df.tail()
 
+# In[29]:
+
 filtered_df.head()
 
-reset_df = filtered_df.reset_index(drop=True)
+# In[30]:
 
+reset_df = filtered_df.reset_index(drop=True)
 reset_df
 
+# In[31]:
+
 reset_df = reset_df[reset_df['CAT'] == 'OP NO']
-
 reset_df = reset_df.reset_index(drop=True)
-
 reset_df.head()
 
+# In[32]:
+
 selected_columns = ['College name in college and course sheet 2023', 'STATE', 'Allotted Quota', 'CAT', 'R1 Closing', 'Attrition %']
-
 new_df = reset_df[selected_columns]
-
 new_df
+
+# In[33]:
 
 unique_values = new_df['STATE'].unique()
 print(unique_values)
 
+# In[34]:
+
 df_with_r1closing = new_df[new_df['R1 Closing'].notnull()]
-
 df_without_r1closing = new_df[new_df['R1 Closing'].isnull()]
-
+df_without_r1closing.fillna('0',inplace=True)
 df_with_r1closing
 
-df_without_r1closing.fillna('0',inplace=True)
+# In[35]:
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -209,6 +266,8 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # Assuming your DataFrame is called 'df' with columns 'College name', 'STATE', 'R1 Closing', and 'Attrition %'
+
+# In[36]:
 
 # Select the columns for clustering
 columns_for_clustering = ['R1 Closing', 'Attrition %']
@@ -218,11 +277,17 @@ wcss = []
 silhouette_scores = []
 max_clusters = min(10, len(df_with_r1closing) - 1)  # Set the maximum number of clusters based on the size of the dataset
 
+# In[37]:
+
 for num_clusters in range(2, max_clusters + 1):
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     kmeans.fit(df_with_r1closing[columns_for_clustering])
     wcss.append(kmeans.inertia_)
     silhouette_scores.append(silhouette_score(df_with_r1closing[columns_for_clustering], kmeans.labels_))
+
+
+# In[38]:
+
 
 # Plot the elbow curve
 plt.plot(range(2, max_clusters + 1), wcss, marker='o')
@@ -231,6 +296,9 @@ plt.ylabel('WCSS')
 plt.title('Elbow Curve')
 plt.show()
 
+# In[39]:
+
+
 # Plot the silhouette scores
 plt.plot(range(2, max_clusters + 1), silhouette_scores, marker='o')
 plt.xlabel('Number of Clusters')
@@ -238,19 +306,28 @@ plt.ylabel('Silhouette Score')
 plt.title('Silhouette Score')
 plt.show()
 
+# In[40]:
+
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # Assuming your DataFrame is called 'df_with_r1closing' and contains the necessary columns
 
+# In[41]:
+
 # Select the columns for clustering
 columns_for_clustering = ['R1 Closing', 'Attrition %']
+
+# In[42]:
 
 # Perform K-means clustering
 num_clusters = 2  # Adjust the number of clusters as per your requirements
 kmeans = KMeans(n_clusters=num_clusters, random_state=42)
 kmeans.fit(df_with_r1closing[columns_for_clustering])
+
+# In[43]:
+
 
 # Assign the cluster labels to the DataFrame
 df_with_r1closing['Cluster'] = kmeans.labels_
@@ -262,7 +339,11 @@ df_with_r1closing['Attraction Index'] = df_with_r1closing.groupby('Cluster')['R1
 silhouette_avg = silhouette_score(df_with_r1closing[columns_for_clustering], kmeans.labels_)
 print(f"Silhouette Score: {silhouette_avg:.2f}")
 
+# In[44]:
+
 df_with_r1closing
+
+# In[45]:
 
 import pandas as pd
 
@@ -309,30 +390,43 @@ df_with_r1closing['Attraction Index_State'].fillna(0, inplace=True)
 # Print the selected columns to observe the changes in attraction index
 print(df_with_r1closing[['College name in college and course sheet 2023', 'R1 Closing', 'Attrition %', 'Attraction Index_State']])
 
+# In[46]:
+
 df_with_r1closing
+
+
+# In[47]:
+
 
 df_with_r1closing['Sum'] = df_with_r1closing['Attraction Index'] + df_with_r1closing['Attraction Index_State']
-
 df_with_r1closing
+
+
+# In[48]:
+
 
 df_with_r1closing.drop(['Attraction Index', 'Attraction Index_State'], axis=1, inplace=True)
-
 df_with_r1closing.rename(columns={'Sum': 'Attraction Index'}, inplace=True)
-
 df_with_r1closing
 
+
+# In[49]:
+
+
 merged_df = pd.concat([df_with_r1closing, df_without_r1closing], ignore_index=True)
-
-
-
-# Print the merged and sorted DataFrame
 print(merged_df)
 
+
+# In[50]:
+
+
 merged_df.to_csv("Merged_data.csv")
-
 merged_df.sort_values(by='Attraction Index', ascending=True, inplace=True)
-
 merged_df
+
+
+# In[51]:
+
 
 # Calculate the statistics for the "R1 Closing" column
 mean_r1_closing = df_with_r1closing['R1 Closing'].mean()
@@ -346,6 +440,9 @@ print(f"Standard Deviation of R1 Closing: {std_r1_closing}")
 print(f"Minimum R1 Closing: {min_r1_closing}")
 print(f"Maximum R1 Closing: {max_r1_closing}")
 
+
+# In[52]:
+
 # Calculate the statistics for the "Attrition %" column
 mean_attrition = df_with_r1closing['Attrition %'].mean()
 std_attrition = df_with_r1closing['Attrition %'].std()
@@ -358,11 +455,14 @@ print(f"Standard Deviation of Attrition %: {std_attrition}")
 print(f"Minimum Attrition %: {min_attrition}")
 print(f"Maximum Attrition %: {max_attrition}")
 
+# In[53]:
+
 # Calculate the statistics for the "Cluster" column
 mean_cluster = df_with_r1closing['Cluster'].mean()
-
-# Display the calculated statistics
 print(f"Mean Cluster: {mean_cluster}")
+
+
+# In[54]:
 
 # Calculate the statistics for the "Attraction Index" column
 mean_attraction_index = df_with_r1closing['Attraction Index'].mean()
@@ -376,11 +476,21 @@ print(f"Standard Deviation of Attraction Index: {std_attraction_index}")
 print(f"Minimum Attraction Index: {min_attraction_index}")
 print(f"Maximum Attraction Index: {max_attraction_index}")
 
+
+# In[55]:
+
+
 # Display clusters and their corresponding attraction indexes
 cluster_attraction = df_with_r1closing.groupby('Cluster')['Attraction Index'].mean()
 print("Clusters and Their Corresponding Attraction Indexes:")
 for cluster, attraction_index in cluster_attraction.items():
     print(f"Cluster {cluster}: Attraction Index {attraction_index:.2f}")
 
+
+# In[56]:
+
 merged_df.to_csv("Attraction_Index_AllIndia_OPNO_file.csv")
+
+
+# In[ ]:
 
