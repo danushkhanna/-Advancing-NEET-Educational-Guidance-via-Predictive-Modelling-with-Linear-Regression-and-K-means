@@ -41,8 +41,8 @@ Problem 2: Colleges experience varying levels of attrition (dropout rates) among
 To address this, our project delved into College Clustering using the k-means algorithm. By applying this technique to a dataset of 400 colleges, we clustered them based on Round 1 closings and attrition rates. To refine our clustering process, we employed methods like the elbow curve and silhouette score. Our goal was to gain insights into the factors contributing to student attrition.
 
 <p float="left">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="250" height="450">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="650" height="450">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="200" height="400">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="600" height="400">
 </p>
 
 ## Visualizations
