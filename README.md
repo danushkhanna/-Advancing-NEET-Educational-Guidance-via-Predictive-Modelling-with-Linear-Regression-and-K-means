@@ -32,7 +32,7 @@ Our study commences with an in-depth examination of data analytics, aiming to re
 
 To address the problem of colleges experiencing varying levels of attrition (dropout rates) among students and the lack of understanding about factors influencing student attrition, our project delved into Rank Estimation with Linear Regression.
 
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Linear%20Regression%20Prediction.png" width="500" height="500">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Linear%20Regression%20Prediction.png" width="450" height="450">
 
 ## College Clustering with K-means Algorithm
 
@@ -50,21 +50,25 @@ To address this, our project delved into College Clustering using the k-means al
 Continuing our analysis, we computed the "Attraction Index" for colleges, providing insights into their appeal. This index, derived from analyzing 324 colleges, revealed a mean score of 94.45, highlighting the prestige of various institutions.
 
 <p float="left">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="500" height="500">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Average%20Attrition%20%25%20by%20Cluster%20.png" width="500" height="500">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="400" height="400">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Average%20Attrition%20%25%20by%20Cluster%20.png" width="400" height="400">
 </p>
 
 ## Summary Statistics
 
 We then moved on to compute the Attraction Index. Through K-means clustering, a robust unsupervised machine learning algorithm, we categorized the colleges based on their characteristics. This approach sets the stage for developing tailored counseling strategies, catering to the unique dynamics of each college.
 
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="500" height="500">
+<p float="left">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="500" height="400">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Top%20Colleges%20by%20Attraction%20Index.png" width="500" height="400">
+</p>
+
 
 Next, we conducted model validation by analyzing regional trends and evaluating our predictive models. Through box plots, we visually represented the differences in attrition rates across various states, providing insights into the educational landscape. Additionally, our Linear Regression model achieved a robust R-squared value of 0.8925 during validation, indicating its accuracy in predicting Expected Scores based on NEET Ranks.
 
 ## Usage
 
-If you're excited to harness the potential of data analytics and predictive modeling in the field of NEET counseling, follow these steps:
+If you're excited to leverage the potential of our project, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required libraries and dependencies listed in the `requirements.txt` file.
@@ -72,7 +76,7 @@ If you're excited to harness the potential of data analytics and predictive mode
 
 ## Contributions
 
-Your contributions are invaluable to us! Whether it's enhancing existing features, introducing novel insights, or refining the codebase, we wholeheartedly welcome your input. Feel free to submit issues or pull requests to be a part of this transformative project.
+Your contributions are invaluable to us! Whether it's enhancing existing features, introducing novel insights, or refining the codebase, we welcome your input. Feel free to submit issues or pull requests to be a part of this project.
 
 ## License
 
