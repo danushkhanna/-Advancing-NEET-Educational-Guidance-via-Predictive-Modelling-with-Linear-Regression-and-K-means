@@ -59,8 +59,8 @@ Continuing our analysis, we computed the "Attraction Index" for colleges, provid
 We then moved on to compute the Attraction Index. Through K-means clustering, a robust unsupervised machine learning algorithm, we categorized the colleges based on their characteristics. This approach sets the stage for developing tailored counseling strategies, catering to the unique dynamics of each college.
 
 <p float="left">
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="450" height="350">
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Top%20Colleges%20by%20Attraction%20Index.png" width="450" height="350">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="400" height="300">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Top%20Colleges%20by%20Attraction%20Index.png" width="400" height="200">
 </p>
 
 
