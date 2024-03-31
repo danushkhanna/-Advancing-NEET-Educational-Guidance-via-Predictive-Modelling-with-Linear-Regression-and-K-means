@@ -41,8 +41,8 @@ Problem 2: Colleges experience varying levels of attrition (dropout rates) among
 To address this, our project delved into College Clustering using the k-means algorithm. By applying this technique to a dataset of 400 colleges, we clustered them based on Round 1 closings and attrition rates. To refine our clustering process, we employed methods like the elbow curve and silhouette score. Our goal was to gain insights into the factors contributing to student attrition.
 
 <p float="left">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="300" height="500">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="700" height="500">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Elbow%20Curve%20%26%20Silhouette%20Score.png" width="250" height="450">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/State-wise%20Distribution%20of%20Students.png" width="650" height="450">
 </p>
 
 ## Visualizations
@@ -50,8 +50,8 @@ To address this, our project delved into College Clustering using the k-means al
 Continuing our analysis, we computed the "Attraction Index" for colleges, providing insights into their appeal. This index, derived from analyzing 324 colleges, revealed a mean score of 94.45, highlighting the prestige of various institutions.
 
 <p float="left">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="400" height="400">
-  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Average%20Attrition%20%25%20by%20Cluster%20.png" width="400" height="400">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20%25%20by%20State.png" width="350" height="350">
+  <img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Average%20Attrition%20%25%20by%20Cluster%20.png" width="350" height="350">
 </p>
 
 ## Summary Statistics
@@ -59,8 +59,8 @@ Continuing our analysis, we computed the "Attraction Index" for colleges, provid
 We then moved on to compute the Attraction Index. Through K-means clustering, a robust unsupervised machine learning algorithm, we categorized the colleges based on their characteristics. This approach sets the stage for developing tailored counseling strategies, catering to the unique dynamics of each college.
 
 <p float="left">
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="500" height="400">
-<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Top%20Colleges%20by%20Attraction%20Index.png" width="500" height="400">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Attrition%20vs.%20College%20Rank.png" width="450" height="350">
+<img src="https://github.com/danushkhanna/Statistical-Analysis-and-Prediction-of-National-Medical-Exam-Performance-Using-ML/blob/main/Top%20Colleges%20by%20Attraction%20Index.png" width="450" height="350">
 </p>
 
 
